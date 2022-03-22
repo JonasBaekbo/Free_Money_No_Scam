@@ -1,8 +1,11 @@
 package com.example.freemoneynoscam.services;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
 public class ValidateEmailService {
     public boolean isEmailValid(String email){
-        //TODO implement logic such that we verify an e-mail is valid
-        return true;
+        EmailValidator validator = EmailValidator.getInstance();
+
+        return validator.isValid(email);
     }
 }
