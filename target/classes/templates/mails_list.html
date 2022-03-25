@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<p th:text="${mail}"></p> -- Shows the first mail in the database -->
+<tr th:each="mail: ${mails}"> <!-- Foreach loop to show all mails in the database -->
+    <td th:text="${mail}" />
+</tr>
+</body>
+</html>

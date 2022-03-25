@@ -34,8 +34,8 @@ public class EmailRepository {
         try {
             connect();
             stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-
-            sqlString = "SELECT * FROM emails LIMIT 4";
+            sqlString = "SELECT * FROM emails";
+           // sqlString = "SELECT * FROM emails LIMIT 4";
 
             rs = stmt.executeQuery(sqlString);
             while (rs.next()) {

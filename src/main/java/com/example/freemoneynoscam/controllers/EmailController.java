@@ -13,5 +13,10 @@ public class EmailController {
         m.addAttribute("mails", EmailRepository.fetchAllEmails()); // Shows all mails from the database
         return "mails_list";
     }
+    @GetMapping("/list_all")
+    public String mails_list_all(Model m){
+        m.addAttribute("mails", EmailRepository.fetchAllEmails()); // Shows all mails from the database
+        return "mails_list_all";
+    }
 
 }
